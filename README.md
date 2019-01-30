@@ -9,7 +9,7 @@
 [![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/akkefa)
 
 
-A text file containing 10k Urdu words for all your dictionary/word-based projects e.g: auto-completion / autosuggestion / Embedding networks
+A text file containing 19k Urdu words for all your dictionary/word-based projects e.g: auto-completion / autosuggestion / Embedding networks
 
 ## Files you may be interested in:
 
