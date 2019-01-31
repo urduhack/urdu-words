@@ -12,6 +12,8 @@ def test_words():
     handler = open(file_name, encoding="utf8")
     for word in handler:
         for character in word.strip():
+            if character is ' ':
+                continue
             assert character in URDU_ALPHABETS, F"Incorrect word: {word} and char: {character}"
     handler.close()
 
