@@ -1,4 +1,4 @@
-# 19,000 unique Urdu words collections 
+# 150k+ unique Urdu words collections 
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/urduhack/urdu-words/blob/master/LICENSE)
 ![Last commit](https://img.shields.io/github/last-commit/urduhack/urdu-words.svg)
@@ -9,7 +9,7 @@
 [![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/akkefa)
 
 
-A text file containing 19k Urdu words for all your dictionary/word-based projects e.g: auto-completion / autosuggestion / Embedding networks
+A text file containing 150k+ Urdu words for all your dictionary/word-based projects e.g: auto-completion / autosuggestion / Embedding networks
 
 ## Files you may be interested in:
 
@@ -46,7 +46,8 @@ Get updates on Urdu Hack nlp development and chat with the project maintainers a
 
 ## Contributors
 
-Special thanks to everyone who contributed to getting the Urdu hack to the current state
+Special thanks to everyone who contributed to getting the Urdu hack to the current state.
+Thanks to <a href="http://cle.org.pk/software/ling_resources/wordlist.htm">Center for Language Engineering</a> for providing the word list.
 
 ## Sponsors
 
