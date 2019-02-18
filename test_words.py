@@ -2,6 +2,7 @@
 """ Test cases """
 import pickle
 
+from urduhack import normalize
 from urduhack.urdu_characters import URDU_ALPHABETS
 
 file_name: str = "words.txt"
@@ -12,7 +13,7 @@ def test_words():
     handler = open(file_name, encoding="utf8")
     for word in handler:
         for character in word.strip():
-            if character is ' ':
+            if character is '_':
                 continue
             assert character in URDU_ALPHABETS, F"Incorrect word: {word} and char: {character}"
     handler.close()
@@ -23,6 +24,8 @@ def sorted_words():
     handler = open(file_name, encoding="utf8")
     words_set = set()
     for word in handler:
+        word = normalize(word.strip())
+        word = '_'.join(word.split())
         words_set.add(word.strip())
     handler.close()
     print(F"Total words: {len(words_set)}")
