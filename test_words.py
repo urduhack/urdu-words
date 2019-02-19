@@ -6,11 +6,35 @@ from urduhack import normalize
 from urduhack.urdu_characters import URDU_ALPHABETS
 
 file_name: str = "words.txt"
+file_bigram_name: str = "bigram_words.txt"
+file_trigram_name: str = "trigram_words.txt"
 
 
 def test_words():
     """ Test case"""
     handler = open(file_name, encoding="utf8")
+    for word in handler:
+        for character in word.strip():
+            if character is '_':
+                continue
+            assert character in URDU_ALPHABETS, F"Incorrect word: {word} and char: {character}"
+    handler.close()
+
+
+def test_bigram_words():
+    """ Test case"""
+    handler = open(file_bigram_name, encoding="utf8")
+    for word in handler:
+        for character in word.strip():
+            if character is '_':
+                continue
+            assert character in URDU_ALPHABETS, F"Incorrect word: {word} and char: {character}"
+    handler.close()
+
+
+def test_trigram_words():
+    """ Test case"""
+    handler = open(file_trigram_name, encoding="utf8")
     for word in handler:
         for character in word.strip():
             if character is '_':

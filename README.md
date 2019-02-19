@@ -17,6 +17,8 @@ I pulled out the words into a simple new-line-delimited text file.
 Which is more useful when building apps or importing into databases etc.
 
 -  [words.txt](words.txt) Contains all urdu words.
+-  [bigram_words.txt](bigram_words.txt) Contains all urdu bigram words.
+-  [trigram_words.txt](trigram_words.txt) Contains all urdu trigram words.
 
 ## Table of contents
 
