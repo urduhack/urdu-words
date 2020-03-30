@@ -20,6 +20,15 @@ Which is more useful when building apps or importing into databases etc.
 -  [bigram_words.txt](bigram_words.txt) Contains all urdu bigram words.
 -  [trigram_words.txt](trigram_words.txt) Contains all urdu trigram words.
 
+##NER Labels
+I have added words for labelling Named Entity Recognition(NER) Data. These labels contain words related to different categories
+like _Persons_, _Locations_ and _Organizations_ etc. These words give a good starting point for labelling NER data.
+Below are the files containing different label files.
+
+- [locations.txt](ner/locations.txt) Contains locations from across the world
+- [persons.txt](ner/persons.txt) Contains Person Names
+- [organizations.txt](ner/organizations.txt) Contains Organization names
+
 ## Table of contents
 
 - [Contributing](#contributing)

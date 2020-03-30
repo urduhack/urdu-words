@@ -8,6 +8,9 @@ from urduhack.urdu_characters import URDU_ALPHABETS
 file_name: str = "words.txt"
 file_bigram_name: str = "bigram_words.txt"
 file_trigram_name: str = "trigram_words.txt"
+location_file: str = "ner/locations.txt"
+person_file: str = "ner/persons.txt"
+organization_file: str = "ner/organizations.txt"
 
 
 def test_words():
@@ -93,3 +96,66 @@ def load_pkl():
         print("=" * 50)
         print(key)
         print(values)
+
+
+def test_locations():
+    """Test Case"""
+    with open(location_file, "r") as file:
+        for word in file:
+            word = word.strip()
+            for char in word:
+                if char is " ":
+                    continue
+                assert char in URDU_ALPHABETS, f"Incorrect word: {word} and char: {char}"
+
+
+def test_persons():
+    """Test Case"""
+    with open(person_file, "r") as file:
+        for word in file:
+            word = word.strip()
+            for char in word:
+                if char is " ":
+                    continue
+                assert char in URDU_ALPHABETS, f"Incorrect word: {word} and char: {char}"
+
+
+def test_organizations():
+    """Test Case"""
+    with open(organization_file, "r") as file:
+        for word in file:
+            word = word.strip()
+            for char in word:
+                if char is " ":
+                    continue
+                assert char in URDU_ALPHABETS, f"Incorrect word: {word} and char: {char}"
+
+
+def test_ner_duplicates():
+    """Test Case"""
+    locations = []
+    persons = []
+    organizations = []
+    with open(location_file, "r") as loc_file, open(person_file, "r") as per_file, open(
+            organization_file, "r") as org_file:
+        for word in loc_file:
+            word = word.strip()
+            locations.append(word)
+        for word in per_file:
+            word = word.strip()
+            persons.append(word)
+        for word in org_file:
+            word = word.strip()
+            organizations.append(word)
+
+    for word in locations:
+        assert word not in organizations
+        assert word not in persons
+
+    for word in persons:
+        assert word not in locations
+        assert word not in organizations
+
+    for word in organizations:
+        assert word not in persons
+        assert word not in locations
