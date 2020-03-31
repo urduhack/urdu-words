@@ -11,6 +11,7 @@ file_trigram_name: str = "trigram_words.txt"
 location_file: str = "ner/locations.txt"
 person_file: str = "ner/persons.txt"
 organization_file: str = "ner/organizations.txt"
+date_file: str = "ner/dates.txt"
 
 
 def test_words():
@@ -131,13 +132,25 @@ def test_organizations():
                 assert char in URDU_ALPHABETS, f"Incorrect word: {word} and char: {char}"
 
 
+def test_dates():
+    """Test Case"""
+    with open(date_file, "r") as file:
+        for word in file:
+            word = word.strip()
+            for char in word:
+                if char is " ":
+                    continue
+                assert char in URDU_ALPHABETS, f"Incorrect word: {word} and char: {char}"
+
+
 def test_ner_duplicates():
     """Test Case"""
     locations = []
     persons = []
     organizations = []
+    dates = []
     with open(location_file, "r") as loc_file, open(person_file, "r") as per_file, open(
-            organization_file, "r") as org_file:
+            organization_file, "r") as org_file, open(date_file, "r") as dat_file:
         for word in loc_file:
             word = word.strip()
             locations.append(word)
@@ -147,15 +160,26 @@ def test_ner_duplicates():
         for word in org_file:
             word = word.strip()
             organizations.append(word)
+        for word in dat_file:
+            word = word.strip()
+            dates.append(word)
 
     for word in locations:
         assert word not in organizations
         assert word not in persons
+        assert word not in dates
 
     for word in persons:
         assert word not in locations
         assert word not in organizations
+        assert word not in dates
 
     for word in organizations:
         assert word not in persons
         assert word not in locations
+        assert word not in dates
+
+    for word in dates:
+        assert word not in persons
+        assert word not in locations
+        assert word not in organizations
