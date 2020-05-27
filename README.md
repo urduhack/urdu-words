@@ -5,7 +5,7 @@
 [![Build Status](https://travis-ci.org/urduhack/urdu-words.svg?branch=master)](https://travis-ci.org/urduhack/urdu-words)
 ![Last commit](https://img.shields.io/github/last-commit/urduhack/urdu-words.svg)
 [![image](https://img.shields.io/github/contributors/urduhack/urdu-words.svg)](https://github.com/urduhack/urdu-words/graphs/contributors)
-[![Join Slack](https://img.shields.io/badge/join-us%20on%20slack-gray.svg?longCache=true&logo=slack&colorB=red)](https://join.slack.com/t/urduhack/shared_invite/enQtNDE5NDg4NzU2Mzg4LTk3ZDNlYzBhOWM5MGY0ZGE0ZmNmNzU2ZTViYjAwMTg3NTBmZGU4OTM0M2E0MzQ0NDI1MDIyYzVkYTVmZTkyZjg)
+[![Join Slack](https://img.shields.io/badge/join-us%20on%20slack-gray.svg?longCache=true&logo=slack&colorB=red)](https://join.slack.com/t/urduhack/shared_invite/zt-5cpkrvz8-Zu_tOyR5AEcspCBCyqhSZQ)
 [![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/akkefa)
 
 
